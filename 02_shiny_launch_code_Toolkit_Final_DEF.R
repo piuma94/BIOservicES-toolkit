@@ -5,11 +5,11 @@ repo_dir <- "C:/Users/luigi.caopinna/OneDrive - CREA/Documents/GitHub/BIOservicE
 shinylive::export(
   appdir = repo_dir,
   destdir = file.path(repo_dir, "docs"),
-  wasm_packages = TRUE
+  wasm_packages = TRUE ## this is to have the possibility of reading R packages in the browser
 )
 
 # crea .nojekyll DOPO l'export
-file.create(file.path(repo_dir, "docs", ".nojekyll"))
+file.create(file.path(repo_dir, "docs", ".nojekyll")) # these are some needed file to be read by the github online
 
 # controlli
 file.exists(file.path(repo_dir, "docs", "index.html"))
