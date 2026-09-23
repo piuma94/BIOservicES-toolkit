@@ -1,13 +1,21 @@
-install.packages(c("shinylive", "httpuv")) ## pacchetti per convertire il tutto in html
-shinylive::export(
-  appdir = "C:/Users/luigi.caopinna/OneDrive - CREA/Desktop/Documenti summary BIOservicES/Toolkit Final DEF - online trial",
-  destdir = "docs",
-  wasm_packages = TRUE
-) ### esportiamo la shiny in html ora quindi 
+#install.packages(c("shinylive", "httpuv")) ## pacchetti per convertire il tutto in html
 
-httpuv::runStaticServer("docs")
-# create the .nojekyll file 
-file.create("docs/.nojekyll")
-# does the files exist
-file.exists("docs/index.html")
-file.exists("docs/.nojekyll")
+repo_dir <- "C:/Users/luigi.caopinna/OneDrive - CREA/Documents/GitHub/BIOservicES-toolkit"
+
+shinylive::export(
+  appdir = repo_dir,
+  destdir = file.path(repo_dir, "docs"),
+  wasm_packages = TRUE
+)
+
+# crea .nojekyll DOPO l'export
+file.create(file.path(repo_dir, "docs", ".nojekyll"))
+
+# controlli
+file.exists(file.path(repo_dir, "docs", "index.html"))
+file.exists(file.path(repo_dir, "docs", ".nojekyll"))
+
+# test locale - questa riga blocca R finché non chiudi il server
+httpuv::runStaticServer(
+  file.path(repo_dir, "docs")
+)
