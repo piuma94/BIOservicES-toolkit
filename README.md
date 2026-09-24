@@ -11,3 +11,15 @@ If everythin is already settled, the .app folder is created in the same toolkit 
 
 This is already settled. After changing the folder files, we will then need to re-push them using the github desktop and then merge the branches, and commit it online. 
 After this we will be able to see the toolkit online, at the same link
+
+## Autors
+
+### main author and developer
+* Luigi Cao Pinna 
+  * CREA (Consiglio per la ricerca in agricoltura e l'analisi dell'economia agraria)
+  * **Email:** luigi.caopinna@crea.gov.it
+* Roberta Farina roberta.farina@crea.gov.it
+* Silvia Vanino silvia.vanino@crea.gov.it
+
+### Contestualizzazione e Finanziamenti
+The toolkit was developed as part of the BIOservicES horizon project https://bioservices-project.eu/
