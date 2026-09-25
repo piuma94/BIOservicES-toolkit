@@ -4,24 +4,24 @@ The toolkit explores relationships between soil biodiversity indicators and ecos
 
 The toolkit is organised into four main pages:
 
-Read me
-Provides a concise description of the toolkit, including how ecosystem-service and biodiversity indicators were constructed, how the statistical models should be interpreted, and the main methodological references. It also allows users to download the main model-result tables.
+**Read me**
+Provides a concise description of the toolkit, including how ecosystem-service and biodiversity indicators were constructed, how the statistical models should be interpreted, and the main methodological references. It also allows users to download the main model-result as an excel table.
 
-What should I measure?
+**What should I measure?**
 Allows users to select an ecosystem service and a specific Region × Land Use context. The toolkit then identifies the biodiversity indicators associated with that ecosystem service in the selected context, distinguishing between common-slope and context-specific relationships.
 
-Where is my indicator relevant?
+**Where is my indicator relevant?**
 Allows users to select an ecosystem service and a biodiversity indicator and explore where the corresponding biodiversity–ecosystem service relationship is supported. Observed data and population-level model predictions are displayed graphically together with the relevant model results.
 
-Predict condition
-Allows users to enter a measured biodiversity-indicator value for a selected Region × Land Use context and obtain the corresponding model-based expected ecosystem-service condition. The predicted value is compared with the observed reference distribution for that context and classified using the toolkit's relative traffic-light categories.
+**Predict condition**
+Allows users to enter a measured biodiversity-indicator value for a selected Region × Land Use context and obtain the corresponding model-based expected ecosystem-service condition. The predicted value is compared with the observed reference distribution (33th and 66th quantiles) for that context and classified using the toolkit's relative traffic-light categories.
 
-The statistical relationships implemented in the toolkit are based on fitted beta mixed-effects models. The model results are only shown in this file and the full pipeline can be accessed on request
+The statistical relationships implemented in the toolkit are based on fitted beta mixed-effects models, with a specific structure to reflect the sampling structure of our data. The model results are shown in the file and the full pipeline can be accessed on request.
 
 Online toolkit
 The toolkit is available online at:
 
-https://piuma94.github.io/BIOservicES-toolkit/
+**https://piuma94.github.io/BIOservicES-toolkit/**
 
 The Shiny application is exported as a static Shinylive/WebR website and published online through GitHub Pages.
 
@@ -32,7 +32,7 @@ The complete user-oriented documentation, including information on indicators, e
 
 The docs/ directory contains the Shinylive export used by GitHub Pages.
 
-Authors
+**Authors**
 Main authors and developer
 Luigi Cao Pinna
 CREA – Council for Agricultural Research and Economics
@@ -50,10 +50,13 @@ Claudia De Santis
 CREA – Council for Agricultural Research and Economics
 Email: claudia.desantis@crea.gov.it
 
-Funding
+**Funding**
 This toolkit was developed within the BIOservicES Horizon Europe project.
 
-Project website:
+**License**
+Creative Commons Attribution 4.0 International
+
+**Project website:**
 https://bioservices-project.eu/
 
 ################################################################################################################ DEVELOPERS NOTES
