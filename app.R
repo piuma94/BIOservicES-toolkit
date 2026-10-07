@@ -9,11 +9,11 @@ library(ggplot2)
 ## Required for file downloads in Chromium-based browsers
 ## =========================================================
 
-shiny::downloadButton(
-  outputId = "download_model_results",
-  label = "Download model results (.xlsx)",
-  class = "btn-primary"
-)
+shinylive_downloadButton <- function(...) {
+  tag <- shiny::downloadButton(...)
+  tag$attribs$download <- NULL
+  tag
+}
 ## Optional base directory supplied by the launcher.
 ## This keeps all relative input/output paths anchored to the toolkit folder.
 app_base_dir <- getOption("bioservices.base_dir", NULL)
@@ -959,7 +959,7 @@ ui <- shiny::fluidPage(
               shiny::p(
                 "Model-derived Region × Land Use values evaluated at biodiversity = 0, including the link-scale estimates and their response-scale transformation where available."
               ),
-              shiny::downloadButton(
+              shinylive_downloadButton(
                 outputId = "download_intercept_results",
                 label = "Download Region × Land Use results (.xlsx)"
               )
